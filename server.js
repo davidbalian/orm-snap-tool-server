@@ -32,6 +32,7 @@ app.post("/zapier-proxy", async (req, res) => {
 
     // Make a request to the Zapier URL using Axios
     const response = await axios.post(zapierUrl, data["form-contents"]);
+    console.log(data["form-contents"]);
 
     // Forward the Zapier response to the client
     res.json(response.data);
